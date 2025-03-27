@@ -8,3 +8,6 @@
 - [NAS 2](tasks/nas-2/WRITEUP.md)
 - [Касса](tasks/kassa/WRITEUP.md)
 - [Таёжный профиль 1](tasks/taiga-1/WRITEUP.md)
+- [Принтер 1](tasks/misc-1/WRITEUP.md)
+- [Принтер 2](tasks/misc-2/WRITEUP.md)
+- [Временные сообщения](tasks/pwn/WRITEUP.md)

