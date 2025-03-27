@@ -42,6 +42,8 @@ def brute_force_knock(host, port_range, sequence_length=3, check_port=1337):
         tried += 1
         if tried % 10 == 0:
             print(f"Tried {tried}/{total_combinations} combinations...")
+        if tried < 330:
+            continue
 
         # Perform the knock sequence
         knock_ports(host, sequence)
@@ -60,16 +62,10 @@ if __name__ == "__main__":
     port_range = (1337, 1377)  # The range mentioned in the message
     service_port = 80  # Common port to check after knocking
 
-#    working_sequence = brute_force_knock(
-#        target_host, port_range, check_port=service_port
-#    )
-    knock_ports(target_host, (1337, 1345, 1363)) 
-    knock_ports(target_host, (1337, 1345, 1363)) 
-    knock_ports(target_host, (1337, 1345, 1363)) 
-    knock_ports(target_host, (1337, 1345, 1363)) 
-    knock_ports(target_host, (1337, 1345, 1363)) 
-    knock_ports(target_host, (1337, 1345, 1363)) 
-    knock_ports(target_host, (1337, 1345, 1363)) 
+    working_sequence = brute_force_knock(
+        target_host, port_range, check_port=service_port
+    )
+#    knock_ports(target_host, (1337, 1345, 1363)) 
 
     if True:
         print("You should now have access to the service.")
