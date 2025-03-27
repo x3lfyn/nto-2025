@@ -11,3 +11,4 @@
 - [Принтер 1](tasks/misc-1/WRITEUP.md)
 - [Принтер 2](tasks/misc-2/WRITEUP.md)
 - [Временные сообщения](tasks/pwn/WRITEUP.md)
+- [Кроличья нора](tasks/hardware/WRITEUP.md)
